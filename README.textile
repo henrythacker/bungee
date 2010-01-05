@@ -1,0 +1,33 @@
+h2. Bungee - test harness
+
+!http://github.com/henrythacker/bungee/raw/master/example.png!
+
+h3. Installation
+
+Download the script from GitHub, move into the folder *below* your main compiler project folder and run the following:
+
+@git clone git://github.com/henrythacker/bungee.git@
+
+Download the following required ruby gem:
+
+@sudo gem install rainbow@
+
+Move into your *compilers folder* and create symlinks to the test scripts
+
+@ln -s ../bungee/test_harness/bungee.rb bungee.rb@
+@ln -s ../bungee/examples/ examples@
+@sudo chmod +x bungee.rb@
+
+Change your interpreter so that the result of the script looks like (the immediate line break is important):
+
+@Result: [INTEGER]\n@
+
+h3. Run test harness
+
+To run the test harness, move into the compilers folder and execute:
+
+@ruby bungee.rb examples@
+
+h3. Add new examples
+
+You should be able to fork your own copy of the repository (click the fork button above). A git url will be presented (select the non-public git URL), clone this onto your local machine, add your new examples and push to your forked copy (@git push origin master@). Once you're done, come back to your forked project page, click the "Pull Request" button at the top, send me a quick message and after testing, I'll merge your changes in.
